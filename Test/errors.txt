@@ -1,0 +1,9 @@
+I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 153: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+        "Not since that accursed rebel group set up shop around here. Picked the whole town clean. 
+
+Ren'Py Version: Ren'Py 6.18.3.761
