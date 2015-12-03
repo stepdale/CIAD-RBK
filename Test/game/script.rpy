@@ -11,6 +11,9 @@ image mc_prologue default = "mc_prologue_default.png"
 image mc_prologue annoyed = "mc_prologue_annoyed.png"
 image mc_prologue uncomfortable = "mc_prologue_uncomfortable.png"
 
+#shihoen prologue images
+image shihoen default = "shihoen_default.png"
+
 # Declare characters used by this game.
 
 define mage = Character('Mage', color="#c8ffc8")
@@ -19,6 +22,7 @@ define player = Character("[playerName]", color="#c8ffc8")
 define nvl_narrator = Character(None, kind=nvl, window_top_padding=30)
 define marcy = Character('Marcy', color="#c8ffc8")
 define man = Character('Man', color="#c8ffc8" )
+define shihoen = Character('Shihoen', color="#c8ffc8")
 
 
 
@@ -61,7 +65,7 @@ label start:
 
     "Hah! Oh, this is going to be great."
 
-    "'{i}I am happy to inform you that your precious brother and I have discovered a new trade in Kaln. We shall contact you with news when we arrive. All the love in the world - Father.{/i}'"
+    "'{i}I am happy to inform you that your precious brother and I have discovered a new trade in Kaln. We shall contact you with news when we arrive. All the love in the world - Papa <3.{/i}'"
 
     "All the love in the world. Why that sneaky old bandit!"
 
@@ -77,22 +81,22 @@ label start:
         playerName = playerName.strip()  
 
 
-    "Good morning [playerName]! My, you're making quite a scary face dear. Is everything alright?"
+    "Good morning [playerName]! My, you're making quite a scary face. Is everything alright?"
 
     show mc_prologue annoyed
     player "Ahh? Oh. Morning Marcy!"
-    player " No...EVERYTHING is NOT ALRIGHT. That father of mine has gone and stolen my trade route..."
+    player " No...EVERYTHING is NOT ALRIGHT. That father of mine has conspired with my brother to steal my trade route..."
     player "Listen Marcy, never trust a youner sibling...you hear me? NEVER."
     player "They are treacherous little things. They try to pull upon your maternal instincts, with wide eyes and easy smiles. And--"
 
 
     marcy "*giggle* Your family is getting along well as usual I see. But...didn't you say that your new trade route led to Kaln?"
 
-    player "YES! Those little..."
-    player "There is so much money to be made there, since some kind of rebel force has been active in the area. Prices for all goods can be raised! Oooh, those sneaks took my--"
+    player "YES! There is so much money to be made there, since some kind of rebel force has been active in the area. Oooh, those sneaks took my--"
+    #since a rebel force has been active in the area as of late.
 
     marcy "But [playerName]...I've heard that the rebel group is in the underground market. Its not safe! They capture young people and poof! They are never seen again!"
-    marcy "That kind of place...the money you make wont even be close to buying your pinky free."
+    marcy "That kind of place...the money you make wont even be enough to buy your pinky."
 
     show mc_prologue uncomfortable
     player "Marcy, have you been reading those tabloids again? Honestly you know that they exaggerate! The Cosmos guild is full of narcissistic--"
@@ -121,7 +125,7 @@ label start:
     player "What? "
     
 
-    marcy "How one of the best barter merchants in Ruiln can be so incredibly dense at times!"
+    marcy "How one of the best barter merchants in Rulin can be so incredibly dense at times!"
 
     hide mc_prologue
 
@@ -130,9 +134,7 @@ label start:
     with fade
 
     show mc_prologue default
-    player "Welcome to the city of Kaln, [playerName]."    
-    player "..."
-    
+
     show mc_prologue annoyed
     player "Its about damn time!"
     player "That lousy father and brother of mine had better not of picked this place clean yet. It took me forever to gather anything worth trading and bartering for on the journey here." 
@@ -187,6 +189,44 @@ label start:
 
     nvl_narrator "How long I stood their staring, I cannot say. But a rough hand gripped my wrist and suddenly I was staring into pale ice blue eyes."
 
+    show shihoen default #annoyed
 
+    shihoen "WHAT ARE YOU DOING?!"
+
+    show mc_prologue uncomfortable
+
+    player "huh?"
+
+    player "..."
+
+    "He tightened his grip on my wrist and scowled further and jerked me along"
+
+    player "wha?!"
+
+    show shohoen default
+
+    shihoen "Great! Just great! I had to get the twit! Come on! Move! Do you want to end up on the black market?!"
+
+    "He paused in his gait to stare at me assessingly. I frowned at the look"
+
+    shihoen "Or are you one of 'those'? Did you 'want' to get caught?"
+
+    show mc_prologue annoyed
+
+    "One of 'those'?! Why this vile...what part of me screams 'please take me, and do what ever you want to me?!' First that unsufferable villager and now..."
+
+    "is it the shirt? ... did yellow become a whore staple or something?!"
+
+    player "You "
+
+    show shihoen default
+
+    "He didn't give me time to rebute he just shook his head and just jerked me harder"
+
+    shihoen "Nevermind! Regaurdless! I cannot allow you to go now that the others have seen you. Don't get me wrong, oath or no, I couldn't careless what happens to...one of your kind...But the others take those superflous oaths seriously. And honestly letting you go would cause me more headaches than not."
+
+    player "Wait just a !"
+
+    shihoen "So just shut up, keep up, and I might just 'accidently' leave you alone for awhile."
 
     return
